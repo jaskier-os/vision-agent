@@ -1,0 +1,13 @@
+node_modules
+sdk/node_modules
+.env
+.env.example
+*.log
+.git
+.gitignore
+.vscode
+.idea
+*.md
+.DS_Store
+tests
+__tests__

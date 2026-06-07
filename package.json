@@ -1,0 +1,15 @@
+{
+  "name": "vision-agent",
+  "version": "1.0.0",
+  "description": "Vision agent with LLM image analysis and reverse image search",
+  "type": "module",
+  "scripts": {
+    "agent": "node src/agent-entry.js",
+    "dev": "npx nodemon src/agent-entry.js"
+  },
+  "dependencies": {
+    "@orchestrator/sdk": "file:./sdk",
+    "dotenv": "^17.2.3",
+    "ws": "^8.16.0"
+  }
+}

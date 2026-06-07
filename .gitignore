@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+sdk/node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*-service-account.json
+
+# Certs / keys (never commit)
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+
+# Build artifacts / caches
+dist/
+build/
+.cache/
+coverage/
+*.log
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
