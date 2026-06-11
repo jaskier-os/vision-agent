@@ -1,5 +1,7 @@
 # vision-agent
 
+> **Docs & wiki:** [github.com/jaskier-os/docs/wiki](https://github.com/jaskier-os/docs/wiki)
+
 Image-analysis agent for the orchestrator. It connects over WebSocket, receives requests
 with an attached image, and runs a tool-calling loop with two tools: `analyze_image`
 (sends the image to the communicator/LLM gateway for description, identification, or Q&A)
