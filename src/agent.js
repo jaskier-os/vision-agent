@@ -233,7 +233,8 @@ export class VisionAgent extends BaseAgent {
           name: 'reverse_image_search',
           arguments: { image_base64: imageBase64 }
         }
-      })
+      }),
+      signal: AbortSignal.timeout(60_000)
     });
 
     if (!response.ok) {
@@ -271,7 +272,8 @@ export class VisionAgent extends BaseAgent {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.apiKey}`
       },
-      body: JSON.stringify({ image_base64: imageBase64 })
+      body: JSON.stringify({ image_base64: imageBase64 }),
+      signal: AbortSignal.timeout(30_000)
     });
 
     if (!response.ok) {
@@ -296,6 +298,7 @@ export class VisionAgent extends BaseAgent {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.apiKey}`
       },
+      signal: AbortSignal.timeout(120_000),
       body: JSON.stringify({
         model: this.model,
         messages: [
